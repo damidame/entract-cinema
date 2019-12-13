@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
+package com.cinema.entract.data.model
+
+data class DateRangeData(
+    val minimumDate: String,
+    val maximumDate: String
 )

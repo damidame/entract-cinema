@@ -14,8 +14,23 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.remote.model
+
+import com.cinema.entract.data.model.WeekData
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class WeekRemote(
+    val debutsemaine: String,
+    val finsemaine: String,
+    val jours: List<DayRemote>,
+    val filmsDisponibles: Boolean
+) {
+
+    fun mapToData() = WeekData(
+        debutsemaine,
+        finsemaine,
+        jours.map { it.mapToData() },
+        filmsDisponibles
+    )
+}

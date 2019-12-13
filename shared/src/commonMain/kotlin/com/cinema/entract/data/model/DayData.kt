@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
+package com.cinema.entract.data.model
+
+data class DayData(
+    val date: String,
+    val movies: List<MovieData>
 )

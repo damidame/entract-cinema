@@ -14,8 +14,19 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.remote.model
+
+import com.cinema.entract.data.model.DayData
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class DayRemote(
+    val jour: String,
+    val films: List<MovieRemote>
+) {
+
+    fun mapToData() = DayData(
+        jour,
+        films.map { it.mapToData() }
+    )
+}

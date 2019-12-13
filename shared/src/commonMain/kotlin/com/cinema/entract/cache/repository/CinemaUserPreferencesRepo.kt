@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.cache.repository
+
+import com.cinema.entract.data.repository.UserPreferencesRepo
+
+expect class CinemaUserPreferencesRepo : UserPreferencesRepo

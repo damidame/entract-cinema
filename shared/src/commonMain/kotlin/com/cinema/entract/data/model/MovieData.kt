@@ -14,8 +14,26 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
+package com.cinema.entract.data.model
+
+data class MovieData(
+    val sessionId: String,
+    val movieId: String,
+    val title: String,
+    val date: String,
+    val schedule: String,
+    val isThreeDimension: Boolean,
+    val isOriginalVersion: Boolean,
+    val isArtMovie: Boolean,
+    val isUnderTwelve: Boolean,
+    val isExplicitContent: Boolean,
+    val coverUrl: String,
+    val duration: String,
+    val yearOfProduction: String,
+    val genre: String,
+    val director: String,
+    val cast: String,
+    val synopsis: String,
+    val teaserId: String,
+    val nextMovies: List<MovieData>
 )

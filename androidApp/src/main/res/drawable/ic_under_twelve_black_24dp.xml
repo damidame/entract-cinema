@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright 2019 Stéphane Baiget
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    >
+    <path
+        android:fillColor="#000000"
+        android:pathData="M11.9951,2A10.005,10 0,0 0,2 11.7184h3.8525v2.1115L2.1656,13.83A10.005,10 0,0 0,11.9951 22,10.005 10,0 0,0 22,12.0001 10.005,10 0,0 0,11.9951 2ZM14.9213,5.8447c1.9854,0 3.2243,1.0001 3.2243,3.0639 0,1.2224 -0.4289,2.1908 -0.9848,3.2544l-2.0012,3.7941h2.7795v2.0638h-6.2896l2.7001,-4.953c0.6195,-1.143 1.5406,-2.7622 1.5406,-4.0799 0,-0.6191 -0.1905,-1.4764 -0.9529,-1.4764 -0.9054,0 -0.953,1.286 -0.953,1.9368l0.0317,0.7619h-2.1917l-0.0319,-0.6508c0,-2.2225 0.6353,-3.7148 3.1288,-3.7148zM6.5512,6.0511h3.4466v11.9697L7.6948,18.0208v-9.9059L6.5512,8.1149Z"
+        android:strokeWidth="0.08821655"
+        />
+</vector>

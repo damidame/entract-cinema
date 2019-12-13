@@ -14,8 +14,20 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.app.model
+
+import com.cinema.entract.data.model.DateRangeData
+import org.threeten.bp.LocalDate
+
+data class DateParameters(
+    val currentDate: LocalDate,
+    val minimumDate: LocalDate?,
+    val maximumDate: LocalDate?
+) {
+
+    constructor(currentDate: String, range: DateRangeData?) : this(
+        LocalDate.parse(currentDate),
+        range?.let { LocalDate.parse(it.minimumDate) },
+        range?.let { LocalDate.parse(it.maximumDate) }
+    )
+}

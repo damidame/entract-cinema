@@ -14,8 +14,19 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.app.di
+
+import com.cinema.entract.app.ui.CinemaViewModel
+import com.cinema.entract.app.ui.TagViewModel
+import com.cinema.entract.app.ui.startup.StartupViewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.dsl.module
+import kotlin.time.ExperimentalTime
+
+@ExperimentalTime
+val uiModule = module {
+
+    viewModel { StartupViewModel(get()) }
+    viewModel { CinemaViewModel(get()) }
+    viewModel { TagViewModel(get()) }
+}

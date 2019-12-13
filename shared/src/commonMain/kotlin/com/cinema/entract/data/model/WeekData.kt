@@ -14,8 +14,11 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
+package com.cinema.entract.data.model
+
+data class WeekData(
+    val beginDay: String,
+    val endDay: String,
+    val days: List<DayData>,
+    val hasMovies: Boolean
 )

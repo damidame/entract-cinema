@@ -14,8 +14,17 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.data.repository
+
+interface UserPreferencesRepo {
+
+    fun isPromotionalEnabled(): Boolean
+    fun setPromotionalPreference(enabled: Boolean)
+
+    fun isOnlyOnWifi(): Boolean
+    fun setOnlyOnWifi(onlyOnWifi: Boolean)
+
+    fun getPrefThemeMode(): String
+    fun getThemeMode(): Int
+    fun setThemeMode(mode: String)
+}

@@ -14,8 +14,12 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.remote.model
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class PromotionalRemote(val lien: String) {
+
+    fun mapToData(): String = lien
+}

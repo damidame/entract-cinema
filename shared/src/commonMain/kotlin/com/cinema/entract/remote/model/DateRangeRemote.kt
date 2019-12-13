@@ -14,8 +14,19 @@
  * limitations under the License.
  */
 
-include(
-    ":androidApp",
-    ":shared",
-    ":core"
-)
+package com.cinema.entract.remote.model
+
+import com.cinema.entract.data.model.DateRangeData
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class DateRangeRemote(
+    val date_minimum: String,
+    val date_maximum: String
+) {
+
+    fun mapToData(): DateRangeData = DateRangeData(
+        date_minimum,
+        date_maximum
+    )
+}
