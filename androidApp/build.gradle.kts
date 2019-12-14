@@ -29,8 +29,8 @@ android {
     compileSdkVersion(Android.compileSdkVersion)
 
     compileOptions {
-        sourceCompatibility = Versions.java
-        targetCompatibility = Versions.java
+        sourceCompatibility = Build.Versions.java
+        targetCompatibility = Build.Versions.java
     }
 
     defaultConfig {
@@ -93,23 +93,22 @@ tasks.withType<KotlinCompile> {
 dependencies {
     implementation(project(":shared"))
     implementation(project(":core"))
-    implementation(kotlin("stdlib", Versions.kotlin))
-    implementation(Libs.coroutinesCore)
-    implementation(Libs.coroutinesAndroid)
-    implementation(Libs.appCompat)
-    implementation(Libs.coreKtx)
-    implementation(Libs.recyclerView)
-    implementation(Libs.material)
-    implementation(Libs.constraintLayout)
-    implementation(Libs.lifecyleViewmodel)
-    implementation(Libs.navFragment)
-    implementation(Libs.navUi)
-    implementation(Libs.anko)
+    implementation(kotlin("stdlib", Build.Versions.kotlin))
+    implementation(Coroutines.core)
+    implementation(Coroutines.android)
+    implementation(AndroidX.appCompat)
+    implementation(AndroidX.coreKtx)
+    implementation(AndroidX.recyclerView)
+    implementation(AndroidX.constraintLayout)
+    implementation(AndroidX.lifecyleViewmodel)
+    implementation(AndroidX.navFragment)
+    implementation(AndroidX.navUi)
+    implementation(Google.material)
+    implementation(Google.firebaseCore)
+    implementation(Google.firebaseMessaging)
     implementation(Libs.koinAndroid)
     implementation(Libs.glide)
     implementation(Libs.jsr310)
-    implementation(Libs.firebaseCore)
-    implementation(Libs.firebaseMessaging)
     implementation(Libs.timber)
     implementation(Libs.uniflow)
 }

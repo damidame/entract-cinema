@@ -25,9 +25,8 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import com.cinema.entract.app.R
 import com.cinema.entract.app.databinding.FragmentInformationBinding
+import com.cinema.entract.core.ext.browse
 import com.cinema.entract.core.ui.BaseFragment
-import org.jetbrains.anko.browse
-import org.jetbrains.anko.toast
 import timber.log.Timber
 
 class InformationFragment : BaseFragment() {
@@ -56,7 +55,6 @@ class InformationFragment : BaseFragment() {
                 startActivity(mapIntent)
             } catch (e: Exception) {
                 Timber.e(e)
-                requireContext().toast(R.string.error_general)
             }
         }
         binding.call.setOnClickListener {

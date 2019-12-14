@@ -28,8 +28,8 @@ buildscript {
     }
 
     dependencies {
-        classpath(kotlin("gradle-plugin", Versions.kotlin))
-        classpath(kotlin("serialization", Versions.kotlin))
+        classpath(kotlin("gradle-plugin", Build.Versions.kotlin))
+        classpath(kotlin("serialization", Build.Versions.kotlin))
         classpath(Build.androidGradle)
         classpath(Build.googleServices)
     }
@@ -39,7 +39,6 @@ allprojects {
     repositories {
         jcenter()
         google()
-        maven("https://jitpack.io")
     }
 }
 
@@ -52,12 +51,11 @@ tasks.named<DependencyUpdatesTask>("dependencyUpdates") {
                     candidate.version.matches(Regex("(?i).*[.-]$qualifier[.\\d-+]*"))
                 }
                 if (rejected) {
-                    reject("Release candidate")
+                    reject("Only final versions")
                 }
             }
         }
     }
-    // optional parameters
     checkForGradleUpdate = true
     outputFormatter = "json"
     outputDir = "build/dependencyUpdates"

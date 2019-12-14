@@ -46,16 +46,14 @@ class CinemaViewModel(private val useCase: CinemaUseCase) : BaseViewModel() {
     }
 
     fun loadMovies() {
-        stateFlow {
-            setState(UIState.Loading)
+        setState { UIState.Loading }
+        setState {
             val movies = useCase.getMovies()
             val date = useCase.getDate()
             val dateRange = useCase.getDateRange()
-            setState(
-                CinemaState.OnScreen(
-                    movies.map { Movie(it) },
-                    DateParameters(date, dateRange)
-                )
+            CinemaState.OnScreen(
+                movies.map { Movie(it) },
+                DateParameters(date, dateRange)
             )
         }
     }
@@ -65,30 +63,26 @@ class CinemaViewModel(private val useCase: CinemaUseCase) : BaseViewModel() {
     }
 
     fun loadSchedule() {
-        stateFlow {
-            setState(UIState.Loading)
+        setState { UIState.Loading }
+        setState {
             val schedule = useCase.getSchedule()
             val date = useCase.getDate()
-            setState(
-                CinemaState.Schedule(
-                    LocalDate.parse(date),
-                    schedule.mapToScheduleEntries()
-                )
+            CinemaState.Schedule(
+                LocalDate.parse(date),
+                schedule.mapToScheduleEntries()
             )
         }
     }
 
     fun loadMovieDetails(movie: Movie) {
-        stateFlow(
+        setState { UIState.Loading }
+        setState(
             {
-                setState(UIState.Loading)
                 val retrievedMovie = useCase.getMovie(movie.mapToData())
                 val date = useCase.getDate()
-                setState(
-                    CinemaState.Details(
-                        LocalDate.parse(date),
-                        Movie(retrievedMovie)
-                    )
+                CinemaState.Details(
+                    LocalDate.parse(date),
+                    Movie(retrievedMovie)
                 )
             },
             {
@@ -98,7 +92,7 @@ class CinemaViewModel(private val useCase: CinemaUseCase) : BaseViewModel() {
     }
 
     fun loadPromotional() {
-        withState {
+        setState {
             val url = useCase.getEventUrl()
             url?.let { sendEvent(CinemaEvent.Promotional(it)) }
         }

@@ -10,8 +10,8 @@ android {
     compileSdkVersion(Android.compileSdkVersion)
 
     compileOptions {
-        sourceCompatibility = Versions.java
-        targetCompatibility = Versions.java
+        sourceCompatibility = Build.Versions.java
+        targetCompatibility = Build.Versions.java
     }
 
     defaultConfig {
@@ -49,32 +49,33 @@ kotlin {
 
     sourceSets {
         getByName("commonMain").dependencies {
-            implementation(kotlin("stdlib-common", Versions.kotlin))
-            implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.14.0")
-            implementation("io.ktor:ktor-client-core:1.2.6")
-            implementation("io.ktor:ktor-client-json:1.2.6")
-            implementation("io.ktor:ktor-client-serialization:1.2.6")
+            implementation(kotlin("stdlib-common", Build.Versions.kotlin))
+            implementation(Coroutines.core)
+            implementation(Serialization.common)
+            implementation(Ktor.clientCore)
+            implementation(Ktor.clientJson)
+            implementation(Ktor.clientSerialization)
         }
 
         getByName("androidMain").dependencies {
-            implementation(kotlin("stdlib", Versions.kotlin))
+            implementation(kotlin("stdlib", Build.Versions.kotlin))
             implementation(project(":core"))
-            implementation(Libs.coroutinesAndroid)
-            implementation(Libs.appCompat)
-            implementation(Libs.coreKtx)
+            implementation(Coroutines.android)
+            implementation(Serialization.runtime)
+            implementation(Ktor.clientOkttp)
+            implementation(Ktor.clientJsonJvm)
+            implementation(Ktor.clientSerializationJvm)
+            implementation(AndroidX.appCompat)
+            implementation(AndroidX.coreKtx)
             implementation(Libs.jsr310)
-            implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0")
-            implementation("io.ktor:ktor-client-okhttp:1.2.6")
-            implementation("io.ktor:ktor-client-json-jvm:1.2.6")
-            implementation("io.ktor:ktor-client-serialization-jvm:1.2.6")
         }
 
         getByName("iosMain").dependencies {
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native:${Versions.coroutines}")
-            implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.14.0")
-            implementation("io.ktor:ktor-client-ios:1.2.6")
-            implementation("io.ktor:ktor-client-json-native:1.2.6")
-            implementation("io.ktor:ktor-client-serialization-iosx64:1.2.6")
+            implementation(Coroutines.native)
+            implementation(Serialization.native)
+            implementation(Ktor.clientIos)
+            implementation(Ktor.clientJsonNative)
+            implementation(Ktor.clientSerializationIos)
         }
     }
 }

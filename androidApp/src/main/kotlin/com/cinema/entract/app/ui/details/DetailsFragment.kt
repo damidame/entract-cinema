@@ -47,7 +47,6 @@ import com.cinema.entract.core.ext.toSpanned
 import com.cinema.entract.core.ui.BaseLceFragment
 import io.uniflow.androidx.flow.onStates
 import io.uniflow.core.flow.UIState
-import org.jetbrains.anko.toast
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import timber.log.Timber
 import kotlin.time.ExperimentalTime
@@ -210,7 +209,6 @@ class DetailsFragment : BaseLceFragment() {
             startActivity(intent)
         } catch (e: Exception) {
             Timber.e(e)
-            requireContext().toast(R.string.error_general)
         }
     }
 }

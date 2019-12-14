@@ -16,32 +16,15 @@
 
 import org.gradle.api.JavaVersion
 
-object Versions {
-    val java = JavaVersion.VERSION_1_8
-    const val androidGradle = "3.6.0-beta05"
-    const val googleServices = "4.3.3"
-    const val kotlin = "1.3.61"
-    const val coroutines = "1.3.2"
-    const val appCompat = "1.1.0"
-    const val recyclerView = "1.1.0"
-    const val material = "1.1.0-beta02"
-    const val constraintLayout = "1.1.3"
-    const val lifecyleViewmodel = "2.1.0"
-    const val coreKtx = "1.1.0"
-    const val fragmentKtx = "1.1.0"
-    const val navigation = "2.1.0"
-    const val timber = "4.7.1"
-    const val retrofit = "2.6.2"
-    const val anko = "0.10.8"
-    const val koin = "2.0.1"
-    const val uniflow = "0.8.7"
-    const val glide = "4.10.0"
-    const val jsr310 = "1.2.1"
-    const val firebaseCore = "17.2.1"
-    const val firebaseMessaging = "20.0.1"
-}
-
 object Build {
+
+    object Versions {
+        val java = JavaVersion.VERSION_1_8
+        const val kotlin = "1.3.61"
+        const val androidGradle = "3.6.0-beta05"
+        const val googleServices = "4.3.3"
+    }
+
     val androidGradle = "com.android.tools.build:gradle:${Versions.androidGradle}"
     val googleServices = "com.google.gms:google-services:${Versions.googleServices}"
 }
@@ -53,9 +36,47 @@ object Android {
 }
 
 object Libs {
-    val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-    val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
-    val anko = "org.jetbrains.anko:anko-commons:${Versions.anko}"
+
+    object Versions {
+        const val timber = "4.7.1"
+        const val koin = "2.0.1"
+        const val uniflow = "0.9.3"
+        const val glide = "4.10.0"
+        const val jsr310 = "1.2.1"
+    }
+
+    val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+    val koinAndroid = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+    val uniflow = "io.uniflow:uniflow-androidx:${Versions.uniflow}"
+    val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    val jsr310 = "com.jakewharton.threetenabp:threetenabp:${Versions.jsr310}"
+}
+
+object Google {
+
+    private object Versions {
+        const val material = "1.1.0-beta02"
+        const val firebaseCore = "17.2.1"
+        const val firebaseMessaging = "20.0.1"
+    }
+
+    val material = "com.google.android.material:material:${Versions.material}"
+    val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
+    val firebaseMessaging = "com.google.firebase:firebase-messaging:${Versions.firebaseMessaging}"
+}
+
+
+object AndroidX {
+
+    private object Versions {
+        const val appCompat = "1.1.0"
+        const val recyclerView = "1.1.0"
+        const val constraintLayout = "1.1.3"
+        const val lifecyleViewmodel = "2.1.0"
+        const val coreKtx = "1.1.0"
+        const val fragmentKtx = "1.1.0"
+        const val navigation = "2.1.0"
+    }
 
     val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
@@ -65,16 +86,38 @@ object Libs {
     val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
     val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+}
 
-    val material = "com.google.android.material:material:${Versions.material}"
-    val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
-    val firebaseMessaging = "com.google.firebase:firebase-messaging:${Versions.firebaseMessaging}"
 
-    val timber = "com.jakewharton.timber:timber:${Versions.timber}"
-    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    val retrofitConverterMoshi = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
-    val koinAndroid = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
-    val uniflow = "io.uniflow:uniflow-androidx:${Versions.uniflow}"
-    val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
-    val jsr310 = "com.jakewharton.threetenabp:threetenabp:${Versions.jsr310}"
+object Coroutines {
+
+    private const val version = "1.3.3"
+
+    val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+    val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
+    val native = "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$version"
+}
+
+object Serialization {
+
+    private const val version = "0.14.0"
+
+    val common = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$version"
+    val runtime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$version"
+    val native = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$version"
+}
+
+object Ktor {
+
+    private const val version = "1.2.6"
+
+    val clientCore = "io.ktor:ktor-client-core:$version"
+    val clientJson = "io.ktor:ktor-client-json:$version"
+    val clientSerialization = "io.ktor:ktor-client-serialization:$version"
+    val clientOkttp = "io.ktor:ktor-client-okhttp:$version"
+    val clientJsonJvm = "io.ktor:ktor-client-json-jvm:$version"
+    val clientSerializationJvm = "io.ktor:ktor-client-serialization-jvm:$version"
+    val clientIos = "io.ktor:ktor-client-ios:$version"
+    val clientJsonNative = "io.ktor:ktor-client-json-native:$version"
+    val clientSerializationIos = "io.ktor:ktor-client-serialization-iosx64:$version"
 }

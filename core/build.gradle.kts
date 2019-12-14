@@ -23,8 +23,8 @@ android {
     compileSdkVersion(Android.compileSdkVersion)
 
     compileOptions {
-        sourceCompatibility = Versions.java
-        targetCompatibility = Versions.java
+        sourceCompatibility = Build.Versions.java
+        targetCompatibility = Build.Versions.java
     }
 
     defaultConfig {
@@ -41,16 +41,15 @@ android {
 }
 
 dependencies {
-    implementation(kotlin("stdlib", Versions.kotlin))
+    implementation(kotlin("stdlib", Build.Versions.kotlin))
     implementation(Libs.koinAndroid)
-    implementation(Libs.coroutinesCore)
-    implementation(Libs.coroutinesAndroid)
-    implementation(Libs.appCompat)
-    implementation(Libs.coreKtx)
-    implementation(Libs.fragmentKtx)
-    implementation(Libs.anko)
-    implementation(Libs.material)
-    implementation(Libs.lifecyleViewmodel)
+    implementation(Coroutines.core)
+    implementation(Coroutines.android)
+    implementation(AndroidX.appCompat)
+    implementation(AndroidX.coreKtx)
+    implementation(AndroidX.fragmentKtx)
+    implementation(AndroidX.lifecyleViewmodel)
+    implementation(Google.material)
     implementation(Libs.timber)
     implementation(Libs.uniflow)
 }

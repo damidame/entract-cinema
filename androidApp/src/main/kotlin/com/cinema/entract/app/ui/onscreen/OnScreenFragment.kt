@@ -34,6 +34,7 @@ import com.cinema.entract.app.ui.CinemaEvent
 import com.cinema.entract.app.ui.CinemaState
 import com.cinema.entract.app.ui.CinemaViewModel
 import com.cinema.entract.app.ui.promotional.PromotionalActivity
+import com.cinema.entract.core.ext.start
 import com.cinema.entract.core.ui.BaseLceFragment
 import com.cinema.entract.core.utils.EmptinessHelper
 import com.cinema.entract.core.widget.GenericRecyclerViewAdapter
@@ -42,7 +43,6 @@ import com.google.android.material.datepicker.MaterialDatePicker
 import io.uniflow.androidx.flow.onEvents
 import io.uniflow.androidx.flow.onStates
 import io.uniflow.core.flow.UIState
-import org.jetbrains.anko.startActivity
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import kotlin.time.ExperimentalTime
 
@@ -97,7 +97,9 @@ class OnScreenFragment : BaseLceFragment() {
         onEvents(cinemaViewModel) { event ->
             when (val data = event.take()) {
                 is CinemaEvent.Promotional ->
-                    requireActivity().startActivity<PromotionalActivity>(PromotionalActivity.COVER_URL to data.url)
+                    requireActivity().start<PromotionalActivity> {
+                        putExtra(PromotionalActivity.COVER_URL, data.url)
+                    }
             }
         }
 
