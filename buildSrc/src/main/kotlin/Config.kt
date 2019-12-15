@@ -14,19 +14,16 @@
  * limitations under the License.
  */
 
-import org.gradle.api.JavaVersion
-
 object Build {
 
     object Versions {
-        val java = JavaVersion.VERSION_1_8
         const val kotlin = "1.3.61"
         const val androidGradle = "3.6.0-beta05"
         const val googleServices = "4.3.3"
     }
 
-    val androidGradle = "com.android.tools.build:gradle:${Versions.androidGradle}"
-    val googleServices = "com.google.gms:google-services:${Versions.googleServices}"
+    const val androidGradle = "com.android.tools.build:gradle:${Versions.androidGradle}"
+    const val googleServices = "com.google.gms:google-services:${Versions.googleServices}"
 }
 
 object Android {
@@ -37,19 +34,19 @@ object Android {
 
 object Libs {
 
-    object Versions {
+    private object Versions {
         const val timber = "4.7.1"
         const val koin = "2.0.1"
         const val uniflow = "0.9.3"
-        const val glide = "4.10.0"
+        const val coil = "0.9.0-SNAPSHOT"
         const val jsr310 = "1.2.1"
     }
 
-    val timber = "com.jakewharton.timber:timber:${Versions.timber}"
-    val koinAndroid = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
-    val uniflow = "io.uniflow:uniflow-androidx:${Versions.uniflow}"
-    val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
-    val jsr310 = "com.jakewharton.threetenabp:threetenabp:${Versions.jsr310}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+    const val koinAndroid = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+    const val uniflow = "io.uniflow:uniflow-androidx:${Versions.uniflow}"
+    const val coil = "io.coil-kt:coil:${Versions.coil}"
+    const val jsr310 = "com.jakewharton.threetenabp:threetenabp:${Versions.jsr310}"
 }
 
 object Google {
@@ -60,9 +57,9 @@ object Google {
         const val firebaseMessaging = "20.0.1"
     }
 
-    val material = "com.google.android.material:material:${Versions.material}"
-    val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
-    val firebaseMessaging = "com.google.firebase:firebase-messaging:${Versions.firebaseMessaging}"
+    const val material = "com.google.android.material:material:${Versions.material}"
+    const val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
+    const val firebaseMessaging = "com.google.firebase:firebase-messaging:${Versions.firebaseMessaging}"
 }
 
 
@@ -78,14 +75,14 @@ object AndroidX {
         const val navigation = "2.1.0"
     }
 
-    val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
-    val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
-    val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
-    val lifecyleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecyleViewmodel}"
-    val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
-    val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
-    val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
-    val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val lifecyleViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecyleViewmodel}"
+    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
+    const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 }
 
 
@@ -93,31 +90,31 @@ object Coroutines {
 
     private const val version = "1.3.3"
 
-    val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
-    val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
-    val native = "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$version"
+    const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+    const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
+    const val native = "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$version"
 }
 
 object Serialization {
 
     private const val version = "0.14.0"
 
-    val common = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$version"
-    val runtime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$version"
-    val native = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$version"
+    const val common = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$version"
+    const val runtime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$version"
+    const val native = "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$version"
 }
 
 object Ktor {
 
     private const val version = "1.2.6"
 
-    val clientCore = "io.ktor:ktor-client-core:$version"
-    val clientJson = "io.ktor:ktor-client-json:$version"
-    val clientSerialization = "io.ktor:ktor-client-serialization:$version"
-    val clientOkttp = "io.ktor:ktor-client-okhttp:$version"
-    val clientJsonJvm = "io.ktor:ktor-client-json-jvm:$version"
-    val clientSerializationJvm = "io.ktor:ktor-client-serialization-jvm:$version"
-    val clientIos = "io.ktor:ktor-client-ios:$version"
-    val clientJsonNative = "io.ktor:ktor-client-json-native:$version"
-    val clientSerializationIos = "io.ktor:ktor-client-serialization-iosx64:$version"
+    const val clientCore = "io.ktor:ktor-client-core:$version"
+    const val clientJson = "io.ktor:ktor-client-json:$version"
+    const val clientSerialization = "io.ktor:ktor-client-serialization:$version"
+    const val clientOkttp = "io.ktor:ktor-client-okhttp:$version"
+    const val clientJsonJvm = "io.ktor:ktor-client-json-jvm:$version"
+    const val clientSerializationJvm = "io.ktor:ktor-client-serialization-jvm:$version"
+    const val clientIos = "io.ktor:ktor-client-ios:$version"
+    const val clientJsonNative = "io.ktor:ktor-client-json-native:$version"
+    const val clientSerializationIos = "io.ktor:ktor-client-serialization-iosx64:$version"
 }

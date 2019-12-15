@@ -31,12 +31,12 @@ import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
+import coil.api.load
 import com.cinema.entract.app.R
 import com.cinema.entract.app.databinding.FragmentDetailsBinding
 import com.cinema.entract.app.databinding.ListItemDetailsMovieBinding
 import com.cinema.entract.app.ext.displayPlaceHolder
 import com.cinema.entract.app.ext.formatToUi
-import com.cinema.entract.app.ext.load
 import com.cinema.entract.app.ext.longFormatToUi
 import com.cinema.entract.app.model.Movie
 import com.cinema.entract.app.ui.CinemaState

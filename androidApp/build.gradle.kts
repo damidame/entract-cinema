@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 /*
  * Copyright 2019 Stéphane Baiget
  *
@@ -27,11 +25,6 @@ val versionPatch = 0
 
 android {
     compileSdkVersion(Android.compileSdkVersion)
-
-    compileOptions {
-        sourceCompatibility = Build.Versions.java
-        targetCompatibility = Build.Versions.java
-    }
 
     defaultConfig {
         applicationId = "com.cinema.entract.app"
@@ -84,12 +77,6 @@ android {
     }
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
-
 dependencies {
     implementation(project(":shared"))
     implementation(project(":core"))
@@ -107,7 +94,7 @@ dependencies {
     implementation(Google.firebaseCore)
     implementation(Google.firebaseMessaging)
     implementation(Libs.koinAndroid)
-    implementation(Libs.glide)
+    implementation(Libs.coil)
     implementation(Libs.jsr310)
     implementation(Libs.timber)
     implementation(Libs.uniflow)

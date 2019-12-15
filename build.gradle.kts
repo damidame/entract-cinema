@@ -1,4 +1,5 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 /*
  * Copyright 2019 Stéphane Baiget
@@ -39,6 +40,25 @@ allprojects {
     repositories {
         jcenter()
         google()
+        maven("https://oss.sonatype.org/content/repositories/snapshots")
+    }
+
+    tasks.withType<KotlinCompile> {
+        kotlinOptions {
+            freeCompilerArgs = listOf("-progressive", "-Xuse-experimental=kotlin.Experimental")
+            jvmTarget = "1.8"
+        }
+    }
+}
+
+subprojects {
+    afterEvaluate {
+        extensions.configure<com.android.build.gradle.BaseExtension> {
+            compileOptions {
+                sourceCompatibility = JavaVersion.VERSION_1_8
+                targetCompatibility = JavaVersion.VERSION_1_8
+            }
+        }
     }
 }
 

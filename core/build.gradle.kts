@@ -22,11 +22,6 @@ plugins {
 android {
     compileSdkVersion(Android.compileSdkVersion)
 
-    compileOptions {
-        sourceCompatibility = Build.Versions.java
-        targetCompatibility = Build.Versions.java
-    }
-
     defaultConfig {
         minSdkVersion(Android.minSdkVersion)
         targetSdkVersion(Android.targetSdkVersion)
