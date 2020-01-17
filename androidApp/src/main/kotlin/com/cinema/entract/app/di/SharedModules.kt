@@ -29,7 +29,7 @@ val cacheModule = module {
 }
 
 val dataModule = module {
-    single { CinemaUseCase(get(), get(), get()) }
+    single { CinemaUseCase(get(), get(), get(), get()) }
     single { TagUseCase(get(), get()) }
     single { NotifUseCase(get()) }
 

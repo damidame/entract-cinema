@@ -7,24 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E33EEB723A4C6F50022D6B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33EEB623A4C6F50022D6B2 /* AppDelegate.swift */; };
-		6E33EEB923A4C6F50022D6B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33EEB823A4C6F50022D6B2 /* SceneDelegate.swift */; };
-		6E33EEBB23A4C6F50022D6B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33EEBA23A4C6F50022D6B2 /* ContentView.swift */; };
-		6E33EEBD23A4C6F60022D6B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E33EEBC23A4C6F60022D6B2 /* Assets.xcassets */; };
-		6E33EEC023A4C6F60022D6B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E33EEBF23A4C6F60022D6B2 /* Preview Assets.xcassets */; };
-		6E33EEC323A4C6F60022D6B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E33EEC123A4C6F60022D6B2 /* LaunchScreen.storyboard */; };
-		6E33EECC23A4C84E0022D6B2 /* shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E33EECB23A4C84E0022D6B2 /* shared.framework */; };
-		6E33EECD23A4C84E0022D6B2 /* shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E33EECB23A4C84E0022D6B2 /* shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E1D99D423BA12AC0028778F /* shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1D99D323BA12AC0028778F /* shared.framework */; };
+		6E1D99D523BA12AC0028778F /* shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1D99D323BA12AC0028778F /* shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6EECA87223B2830800A1EB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EECA87123B2830800A1EB8C /* AppDelegate.swift */; };
+		6EECA87423B2830800A1EB8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EECA87323B2830800A1EB8C /* ViewController.swift */; };
+		6EECA87723B2830800A1EB8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EECA87523B2830800A1EB8C /* Main.storyboard */; };
+		6EECA87923B2830A00A1EB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EECA87823B2830A00A1EB8C /* Assets.xcassets */; };
+		6EECA87C23B2830A00A1EB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EECA87A23B2830A00A1EB8C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6E33EECE23A4C84E0022D6B2 /* Embed Frameworks */ = {
+		6E3D98C923BA10080009511A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6E33EECD23A4C84E0022D6B2 /* shared.framework in Embed Frameworks */,
+				6E1D99D523BA12AC0028778F /* shared.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,114 +31,104 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6E33EEB323A4C6F50022D6B2 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E33EEB623A4C6F50022D6B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E33EEB823A4C6F50022D6B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E33EEBA23A4C6F50022D6B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6E33EEBC23A4C6F60022D6B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6E33EEBF23A4C6F60022D6B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6E33EEC223A4C6F60022D6B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6E33EEC423A4C6F60022D6B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E33EECB23A4C84E0022D6B2 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = "../shared/build/xcode-frameworks/shared.framework"; sourceTree = "<group>"; };
+		6E1D99D323BA12AC0028778F /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = "../shared/build/xcode-frameworks/shared.framework"; sourceTree = "<group>"; };
+		6EECA86E23B2830800A1EB8C /* Entract Cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Entract Cinema.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EECA87123B2830800A1EB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6EECA87323B2830800A1EB8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6EECA87623B2830800A1EB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EECA87823B2830A00A1EB8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6EECA87B23B2830A00A1EB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6EECA87D23B2830A00A1EB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6E33EEB023A4C6F50022D6B2 /* Frameworks */ = {
+		6EECA86B23B2830800A1EB8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E33EECC23A4C84E0022D6B2 /* shared.framework in Frameworks */,
+				6E1D99D423BA12AC0028778F /* shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E33EEAA23A4C6F50022D6B2 = {
+		6E3D98C523BA10080009511A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6E33EEB523A4C6F50022D6B2 /* iosApp */,
-				6E33EEB423A4C6F50022D6B2 /* Products */,
-				6E33EECA23A4C84E0022D6B2 /* Frameworks */,
+				6E1D99D323BA12AC0028778F /* shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EECA86523B2830800A1EB8C = {
+			isa = PBXGroup;
+			children = (
+				6EECA87023B2830800A1EB8C /* Entract Cinema */,
+				6EECA86F23B2830800A1EB8C /* Products */,
+				6E3D98C523BA10080009511A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6E33EEB423A4C6F50022D6B2 /* Products */ = {
+		6EECA86F23B2830800A1EB8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E33EEB323A4C6F50022D6B2 /* iosApp.app */,
+				6EECA86E23B2830800A1EB8C /* Entract Cinema.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6E33EEB523A4C6F50022D6B2 /* iosApp */ = {
+		6EECA87023B2830800A1EB8C /* Entract Cinema */ = {
 			isa = PBXGroup;
 			children = (
-				6E33EEB623A4C6F50022D6B2 /* AppDelegate.swift */,
-				6E33EEB823A4C6F50022D6B2 /* SceneDelegate.swift */,
-				6E33EEBA23A4C6F50022D6B2 /* ContentView.swift */,
-				6E33EEBC23A4C6F60022D6B2 /* Assets.xcassets */,
-				6E33EEC123A4C6F60022D6B2 /* LaunchScreen.storyboard */,
-				6E33EEC423A4C6F60022D6B2 /* Info.plist */,
-				6E33EEBE23A4C6F60022D6B2 /* Preview Content */,
+				6EECA87123B2830800A1EB8C /* AppDelegate.swift */,
+				6EECA87323B2830800A1EB8C /* ViewController.swift */,
+				6EECA87523B2830800A1EB8C /* Main.storyboard */,
+				6EECA87823B2830A00A1EB8C /* Assets.xcassets */,
+				6EECA87A23B2830A00A1EB8C /* LaunchScreen.storyboard */,
+				6EECA87D23B2830A00A1EB8C /* Info.plist */,
 			);
-			path = iosApp;
-			sourceTree = "<group>";
-		};
-		6E33EEBE23A4C6F60022D6B2 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6E33EEBF23A4C6F60022D6B2 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6E33EECA23A4C84E0022D6B2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6E33EECB23A4C84E0022D6B2 /* shared.framework */,
-			);
-			name = Frameworks;
+			path = "Entract Cinema";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E33EEB223A4C6F50022D6B2 /* iosApp */ = {
+		6EECA86D23B2830800A1EB8C /* Entract Cinema */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E33EEC723A4C6F60022D6B2 /* Build configuration list for PBXNativeTarget "iosApp" */;
+			buildConfigurationList = 6EECA88023B2830A00A1EB8C /* Build configuration list for PBXNativeTarget "Entract Cinema" */;
 			buildPhases = (
-				6E33EECF23A4C8F70022D6B2 /* ShellScript */,
-				6E33EEAF23A4C6F50022D6B2 /* Sources */,
-				6E33EEB023A4C6F50022D6B2 /* Frameworks */,
-				6E33EEB123A4C6F50022D6B2 /* Resources */,
-				6E33EECE23A4C84E0022D6B2 /* Embed Frameworks */,
+				6E3D98CA23BA104F0009511A /* ShellScript */,
+				6EECA86A23B2830800A1EB8C /* Sources */,
+				6EECA86B23B2830800A1EB8C /* Frameworks */,
+				6EECA86C23B2830800A1EB8C /* Resources */,
+				6E3D98C923BA10080009511A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iosApp;
-			productName = iosApp;
-			productReference = 6E33EEB323A4C6F50022D6B2 /* iosApp.app */;
+			name = "Entract Cinema";
+			productName = "Entract Cinema";
+			productReference = 6EECA86E23B2830800A1EB8C /* Entract Cinema.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6E33EEAB23A4C6F50022D6B2 /* Project object */ = {
+		6EECA86623B2830800A1EB8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Entract Cinema";
 				TargetAttributes = {
-					6E33EEB223A4C6F50022D6B2 = {
-						CreatedOnToolsVersion = 11.2.1;
+					6EECA86D23B2830800A1EB8C = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 6E33EEAE23A4C6F50022D6B2 /* Build configuration list for PBXProject "iosApp" */;
+			buildConfigurationList = 6EECA86923B2830800A1EB8C /* Build configuration list for PBXProject "Entract Cinema" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,31 +136,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 6E33EEAA23A4C6F50022D6B2;
-			productRefGroup = 6E33EEB423A4C6F50022D6B2 /* Products */;
+			mainGroup = 6EECA86523B2830800A1EB8C;
+			productRefGroup = 6EECA86F23B2830800A1EB8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E33EEB223A4C6F50022D6B2 /* iosApp */,
+				6EECA86D23B2830800A1EB8C /* Entract Cinema */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6E33EEB123A4C6F50022D6B2 /* Resources */ = {
+		6EECA86C23B2830800A1EB8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E33EEC323A4C6F60022D6B2 /* LaunchScreen.storyboard in Resources */,
-				6E33EEC023A4C6F60022D6B2 /* Preview Assets.xcassets in Resources */,
-				6E33EEBD23A4C6F60022D6B2 /* Assets.xcassets in Resources */,
+				6EECA87C23B2830A00A1EB8C /* LaunchScreen.storyboard in Resources */,
+				6EECA87923B2830A00A1EB8C /* Assets.xcassets in Resources */,
+				6EECA87723B2830800A1EB8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6E33EECF23A4C8F70022D6B2 /* ShellScript */ = {
+		6E3D98CA23BA104F0009511A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -186,28 +175,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/../shared/build/xcode-frameworks\"\n./gradlew :shared:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+			shellScript = "cd \"$SRCROOT/../shared/\" ./gradlew :shared:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6E33EEAF23A4C6F50022D6B2 /* Sources */ = {
+		6EECA86A23B2830800A1EB8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E33EEB723A4C6F50022D6B2 /* AppDelegate.swift in Sources */,
-				6E33EEB923A4C6F50022D6B2 /* SceneDelegate.swift in Sources */,
-				6E33EEBB23A4C6F50022D6B2 /* ContentView.swift in Sources */,
+				6EECA87423B2830800A1EB8C /* ViewController.swift in Sources */,
+				6EECA87223B2830800A1EB8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6E33EEC123A4C6F60022D6B2 /* LaunchScreen.storyboard */ = {
+		6EECA87523B2830800A1EB8C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6E33EEC223A4C6F60022D6B2 /* Base */,
+				6EECA87623B2830800A1EB8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6EECA87A23B2830A00A1EB8C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EECA87B23B2830A00A1EB8C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -215,7 +211,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6E33EEC523A4C6F60022D6B2 /* Debug */ = {
+		6EECA87E23B2830A00A1EB8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -247,6 +243,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -265,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +272,7 @@
 			};
 			name = Debug;
 		};
-		6E33EEC623A4C6F60022D6B2 /* Release */ = {
+		6EECA87F23B2830A00A1EB8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -307,6 +304,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -319,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -329,40 +327,36 @@
 			};
 			name = Release;
 		};
-		6E33EEC823A4C6F60022D6B2 /* Debug */ = {
+		6EECA88123B2830A00A1EB8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks";
-				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_FILE = "Entract Cinema/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.entract.cinema.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.entract.cinema.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6E33EEC923A4C6F60022D6B2 /* Release */ = {
+		6EECA88223B2830A00A1EB8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks";
-				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_FILE = "Entract Cinema/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.entract.cinema.iosApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.entract.cinema.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,25 +366,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E33EEAE23A4C6F50022D6B2 /* Build configuration list for PBXProject "iosApp" */ = {
+		6EECA86923B2830800A1EB8C /* Build configuration list for PBXProject "Entract Cinema" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E33EEC523A4C6F60022D6B2 /* Debug */,
-				6E33EEC623A4C6F60022D6B2 /* Release */,
+				6EECA87E23B2830A00A1EB8C /* Debug */,
+				6EECA87F23B2830A00A1EB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E33EEC723A4C6F60022D6B2 /* Build configuration list for PBXNativeTarget "iosApp" */ = {
+		6EECA88023B2830A00A1EB8C /* Build configuration list for PBXNativeTarget "Entract Cinema" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E33EEC823A4C6F60022D6B2 /* Debug */,
-				6E33EEC923A4C6F60022D6B2 /* Release */,
+				6EECA88123B2830A00A1EB8C /* Debug */,
+				6EECA88223B2830A00A1EB8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6E33EEAB23A4C6F50022D6B2 /* Project object */;
+	rootObject = 6EECA86623B2830800A1EB8C /* Project object */;
 }

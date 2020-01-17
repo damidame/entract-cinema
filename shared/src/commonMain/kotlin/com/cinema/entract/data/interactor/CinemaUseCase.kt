@@ -21,11 +21,15 @@ import com.cinema.entract.data.model.MovieData
 import com.cinema.entract.data.model.WeekData
 import com.cinema.entract.data.platform.DateUtils
 import com.cinema.entract.data.platform.NetworkUtils
+import com.cinema.entract.data.platform.PlatformUtils
 import com.cinema.entract.data.source.DataStore
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class CinemaUseCase(
     private val dataStore: DataStore,
     private val networkUtils: NetworkUtils,
+    private val platformUtils: PlatformUtils,
     private val dateUtils: DateUtils
 ) {
 
@@ -37,15 +41,19 @@ class CinemaUseCase(
 
     fun getDate(): String = currentDate ?: dateUtils.todayUtc().also { currentDate = it }
 
-    suspend fun getMovies(): List<MovieData> {
-        return dataStore
-            .getMovies(getDate())
-            .map {
-                if (!canDisplayMedia()) it.copy(
-                    coverUrl = "",
-                    teaserId = ""
-                ) else it
-            }
+    suspend fun getMovies(): List<MovieData> = dataStore
+        .getMovies(getDate())
+        .map {
+            if (!canDisplayMedia()) it.copy(
+                coverUrl = "",
+                teaserId = ""
+            ) else it
+        }
+
+    fun getMovies(success: (List<MovieData>) -> Unit) {
+        GlobalScope.launch(platformUtils.applicationDispatcher) {
+            success(getMovies())
+        }
     }
 
     suspend fun getMovie(movie: MovieData): MovieData {
